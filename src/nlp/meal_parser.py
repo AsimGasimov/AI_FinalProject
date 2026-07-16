@@ -73,6 +73,9 @@ EMBED_THRESHOLD = 0.75
 _embedder = None
 _class_embeddings = None
 _class_targets: list[str] = []
+# Sticky flag: once the embedder proves unavailable (not installed, or no model
+# cache and no network), stop retrying it on every parse.
+_embedder_unavailable = False
 
 
 @dataclass
@@ -136,19 +139,43 @@ def _lexicon_match(phrase: str) -> Optional[str]:
     return None
 
 
+def _load_embedder():
+    """Construct the MiniLM embedder.
+
+    Raises:
+        Exception: If sentence-transformers is missing, or the model is neither
+            cached nor downloadable (offline machine).
+    """
+    from sentence_transformers import SentenceTransformer
+
+    return SentenceTransformer("all-MiniLM-L6-v2")
+
+
 def _embedding_match(phrase: str) -> tuple[Optional[str], float]:
-    """MiniLM cosine match against class names + az_names + synonyms."""
-    global _embedder, _class_embeddings, _class_targets
+    """MiniLM cosine match against class names + az_names + synonyms.
+
+    Degrades to (None, 0.0) when the embedder cannot be loaded at all, so an
+    offline machine with no model cache falls back to "unknown" instead of
+    raising. The lexicon is the first line of matching and needs no model, so
+    the demo stays fully usable without a network.
+    """
+    global _embedder, _class_embeddings, _class_targets, _embedder_unavailable
+    if _embedder_unavailable:
+        return None, 0.0
     if _embedder is None:
-        try:
-            from sentence_transformers import SentenceTransformer
-        except ImportError:
-            return None, 0.0
         import json as _json
 
         from config import settings as _settings
 
-        _embedder = SentenceTransformer("all-MiniLM-L6-v2")
+        try:
+            _embedder = _load_embedder()
+        except Exception:  # noqa: BLE001 - missing dep or offline must not kill the demo
+            log.warning(
+                "MiniLM unavailable (not installed, offline, or no model cache); "
+                "falling back to lexicon-only matching, unmatched foods become "
+                "'unknown'.")
+            _embedder_unavailable = True
+            return None, 0.0
         names: list[str] = []
         targets: list[str] = []
         az_names: dict[str, str] = {}

@@ -86,6 +86,28 @@ class TestEdgeCases:
         e = first("200 qram steyk")
         assert e.food == "steak" and e.qty == 200.0 and e.unit == "qram"
 
+    def test_unloadable_embedder_degrades_to_unknown(
+        self, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        """An embedder that cannot load (offline, no model cache) must not raise.
+
+        LLM_PROVIDER=template keeps the demo offline, but the parser's MiniLM
+        fallback would still reach for huggingface.co on an unseen food; that
+        must degrade to "unknown", never crash the text tab.
+        """
+        from src.nlp import meal_parser as mp
+
+        monkeypatch.setattr(mp, "_embedder", None)
+        monkeypatch.setattr(mp, "_embedder_unavailable", False)
+        monkeypatch.setattr(
+            mp, "_load_embedder",
+            lambda: (_ for _ in ()).throw(OSError("no network, no cache")))
+
+        ents = mp.parse_meal("2 ədəd qutab yedim")  # not in the lexicon
+        assert len(ents) == 1
+        assert ents[0].food == "unknown" and ents[0].in_db is False
+        assert mp._embedder_unavailable is True  # sticky: no retry storm
+
 
 @pytest.mark.parametrize("text,expected_food", [
     ("suşi yedim", "sushi"),
