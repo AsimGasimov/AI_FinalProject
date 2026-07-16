@@ -16,8 +16,11 @@ from config import settings
 from src import db
 from src.schemas import UserProfile
 
+# splits.json and the checkpoints are committed, but data/raw/ is gitignored, so
+# the image files are the only reliable probe for "dataset present".
 needs_data = pytest.mark.skipif(
     not (settings.data_dir / "splits.json").exists()
+    or not (settings.raw_dir / "food-101" / "images").is_dir()
     or not (settings.models_dir / "effnet_best.pt").exists(),
     reason="dataset or effnet checkpoint missing")
 
