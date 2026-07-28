@@ -117,3 +117,31 @@ class TestEdgeCases:
 ])
 def test_food_matching(text: str, expected_food: str) -> None:
     assert first(text).food == expected_food
+
+
+@pytest.mark.parametrize("goal,keyword", [
+    ("lose", "defisit"),
+    ("gain", "profisit"),
+    ("maintain", "tarazlığ"),
+])
+def test_chatbot_goal_aware(goal: str, keyword: str) -> None:
+    """Chatbot reply reflects the user's goal and is RAG-grounded."""
+    from src.nlp.chatbot import answer
+    from src.schemas import UserProfile
+
+    reply = answer("Nə yeməliyəm?",
+                   UserProfile(goal=goal, weight_kg=80, daily_kcal_target=2200))
+    assert keyword in reply.text_az.lower()
+    assert reply.sources, "reply must cite retrieved sources"
+    assert "tibbi məsləhət deyil" in reply.text_az  # disclaimer always present
+
+
+def test_chatbot_remaining_kcal_surfaced() -> None:
+    """When kcal budget is passed, it appears in the (template-mode) reply."""
+    from src.nlp.chatbot import answer
+    from src.schemas import UserProfile
+
+    reply = answer("Bu gün nə yeyim?",
+                   UserProfile(goal="lose", weight_kg=70, daily_kcal_target=2000),
+                   remaining_kcal=500)
+    assert "500" in reply.text_az

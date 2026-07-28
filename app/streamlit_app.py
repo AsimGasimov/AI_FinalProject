@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from config import settings  # noqa: E402
 from src import db  # noqa: E402
+from src.nlp.chatbot import answer as chat_answer  # noqa: E402
 from src.nlp.meal_parser import parse_meal  # noqa: E402
 from src.nlp.summarizer import daily_summary  # noqa: E402
 from src.pipeline import analysis_extras, analyze, load_nutrition_db, macros_for  # noqa: E402
@@ -81,26 +82,72 @@ def nutrition_db() -> dict:
     return load_nutrition_db()
 
 
-# ---------- sidebar: profile ----------
+ACTIVITY_AZ = {"sedentary": "Oturaq", "light": "Yüngül", "moderate": "Orta",
+               "active": "Aktiv", "very_active": "Çox aktiv"}
+GOAL_AZ = {"lose": "Arıqlamaq", "maintain": "Saxlamaq", "gain": "Kütlə artırmaq"}
+SEX_AZ = {"m": "Kişi", "f": "Qadın"}
+
+# Profile defaults live in session_state so onboarding and the sidebar stay in sync.
+_PROFILE_DEFAULTS = {"name": "Qonaq", "age": 30, "sex": "m", "height_cm": 175,
+                     "weight_kg": 75, "activity": "light", "goal": "maintain"}
+for _k, _v in _PROFILE_DEFAULTS.items():
+    st.session_state.setdefault(_k, _v)
+
+# ---------- onboarding: ask sex/weight/height up front to set the kcal target ----------
+if not st.session_state.get("onboarded", False):
+    st.markdown(
+        '<div class="fl-hero"><div class="big">FoodLens-ə xoş gəldiniz 🍽️</div>'
+        '<div class="sub">Sizə uyğun gündəlik kalori hədəfini hesablamaq üçün '
+        'bir neçə məlumat lazımdır.</div></div>', unsafe_allow_html=True)
+    with st.form("onboarding"):
+        c1, c2 = st.columns(2)
+        o_name = c1.text_input("Ad", st.session_state["name"])
+        o_sex = c2.selectbox("Cinsiyyət", ["m", "f"],
+                             index=["m", "f"].index(st.session_state["sex"]),
+                             format_func=lambda s: SEX_AZ[s])
+        o_age = c1.number_input("Yaş", 10, 100, int(st.session_state["age"]))
+        o_height = c2.number_input("Boy (sm)", 100, 230,
+                                   int(st.session_state["height_cm"]))
+        o_weight = c1.number_input("Çəki (kq)", 30, 250,
+                                   int(st.session_state["weight_kg"]))
+        acts = list(ACTIVITY_AZ)
+        o_activity = c2.selectbox("Aktivlik səviyyəsi", acts,
+                                  index=acts.index(st.session_state["activity"]),
+                                  format_func=lambda a: ACTIVITY_AZ[a])
+        goals = list(GOAL_AZ)
+        o_goal = st.selectbox("Məqsədiniz", goals,
+                              index=goals.index(st.session_state["goal"]),
+                              format_func=lambda g: GOAL_AZ[g])
+        submitted = st.form_submit_button("Başla →", use_container_width=True)
+    if submitted:
+        st.session_state.update(name=o_name, age=o_age, sex=o_sex,
+                                height_cm=o_height, weight_kg=o_weight,
+                                activity=o_activity, goal=o_goal, onboarded=True)
+        st.rerun()
+    _t = db.daily_kcal_target(st.session_state["age"], st.session_state["sex"],
+                              st.session_state["height_cm"],
+                              st.session_state["weight_kg"],
+                              st.session_state["activity"], st.session_state["goal"])
+    st.info(f"Hazırkı seçimlərlə təxmini gündəlik hədəf: **~{_t:.0f} kkal**. "
+            "Dəyişib **Başla** düyməsini basın.")
+    st.stop()
+
+# ---------- sidebar: profile (editable after onboarding) ----------
 with st.sidebar:
     st.title("🍽️ FoodLens")
     st.caption("Yemək fotosundan kaloriyə, oradan məsləhətə")
     st.subheader("Profil")
-    name = st.text_input("Ad", "Qonaq")
+    name = st.text_input("Ad", key="name")
     col_a, col_b = st.columns(2)
-    age = col_a.number_input("Yaş", 10, 100, 30)
-    sex = col_b.selectbox("Cins", ["m", "f"], format_func=lambda s: "Kişi" if s == "m" else "Qadın")
-    height_cm = col_a.number_input("Boy (sm)", 100, 230, 175)
-    weight_kg = col_b.number_input("Çəki (kq)", 30, 250, 75)
-    activity = st.selectbox("Aktivlik", ["sedentary", "light", "moderate", "active", "very_active"],
-                            index=1, format_func=lambda a: {
-                                "sedentary": "Oturaq", "light": "Yüngül",
-                                "moderate": "Orta", "active": "Aktiv",
-                                "very_active": "Çox aktiv"}[a])
-    goal = st.selectbox("Məqsəd", ["lose", "maintain", "gain"], index=1,
-                        format_func=lambda g: {"lose": "Arıqlamaq",
-                                               "maintain": "Saxlamaq",
-                                               "gain": "Kütlə artırmaq"}[g])
+    age = col_a.number_input("Yaş", 10, 100, key="age")
+    sex = col_b.selectbox("Cins", ["m", "f"], key="sex",
+                          format_func=lambda s: SEX_AZ[s])
+    height_cm = col_a.number_input("Boy (sm)", 100, 230, key="height_cm")
+    weight_kg = col_b.number_input("Çəki (kq)", 30, 250, key="weight_kg")
+    activity = st.selectbox("Aktivlik", list(ACTIVITY_AZ), key="activity",
+                            format_func=lambda a: ACTIVITY_AZ[a])
+    goal = st.selectbox("Məqsəd", list(GOAL_AZ), key="goal",
+                        format_func=lambda g: GOAL_AZ[g])
     target = db.daily_kcal_target(age, sex, height_cm, weight_kg, activity, goal)
     st.markdown(f'<div class="fl-card"><div class="fl-label">Gündəlik hədəf</div>'
                 f'<div class="fl-kpi">{target:.0f} kkal</div></div>',
@@ -129,8 +176,9 @@ def log_meal(food_class: str, grams: float, confidence: float, source: str) -> N
     session.commit()
 
 
-tab1, tab2, tab3, tab4 = st.tabs(
-    ["📷 Şəkil analizi", "✍️ Mətnlə əlavə et", "📊 Gündəlik", "🧠 Model"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
+    ["📷 Şəkil analizi", "✍️ Mətnlə əlavə et", "📊 Gündəlik", "💬 Məsləhətçi",
+     "🧠 Model"])
 
 # ---------- tab 1: photo analysis ----------
 with tab1:
@@ -157,8 +205,30 @@ with tab1:
             with st.spinner("Vizual nəticələr hazırlanır..."):
                 extras = analysis_extras(img)
 
-            top2 = (f" · 2-ci ehtimal: {meal.top5[1][0]} {meal.top5[1][1]:.0%}"
-                    if len(meal.top5) > 1 else "")
+            db_all = load_nutrition_db()
+            class_names = list(db_all.keys())
+
+            def az_name_of(cls: str) -> str:
+                return db_all[cls]["az_name"]
+
+            if meal.low_confidence:
+                cand = " · ".join(f"{az_name_of(c)} {v:.0%}"
+                                  for c, v in meal.top5[:3])
+                st.warning(
+                    "⚠️ Model bu yeməkdən **əmin deyil** — tanıdığı "
+                    f"yeməklərdən kənarda ola bilər. Ən yaxın ehtimallar: {cand}. "
+                    "Düzgün yeməyi aşağıdan seçə bilərsiniz.")
+
+            _idx = (class_names.index(meal.food_class)
+                    if meal.food_class in class_names else 0)
+            chosen = st.selectbox("Yemək (model səhv təxmin edibsə dəyişin)",
+                                  class_names, index=_idx, format_func=az_name_of)
+            if chosen != meal.food_class:
+                meal.food_class = chosen
+                _, meal.tags, meal.az_name = macros_for(chosen, meal.grams)
+
+            top2 = (f" · 2-ci ehtimal: {az_name_of(meal.top5[1][0])} "
+                    f"{meal.top5[1][1]:.0%}" if len(meal.top5) > 1 else "")
             st.markdown(f"""<div class="fl-hero">
                 <div class="fl-label" style="color:#FFE8D2">Nəticə</div>
                 <div class="big">{meal.az_name}</div>
@@ -271,8 +341,60 @@ with tab3:
             st.info(s.summary_az)
             st.success(s.plan_az)
 
-# ---------- tab 4: model metrics ----------
+# ---------- tab 4: nutrition chatbot ----------
 with tab4:
+    st.header("Qidalanma məsləhətçisi")
+    goal_az = {"lose": "arıqlamaq", "maintain": "çəkini saxlamaq",
+               "gain": "kütlə artırmaq"}[goal]
+    st.caption(f"Məqsədiniz: **{goal_az}** · Gündəlik hədəf: {target:.0f} kkal. "
+               "Sual verin, cavablar profilinizə və məqsədinizə görə "
+               "təlimatlardan hazırlanır.")
+
+    if "chat" not in st.session_state:
+        st.session_state.chat = []
+
+    session = db.get_session()
+    logs = db.logs_for_date(session, get_user_id(), dt.date.today())
+    remaining = float(target) - sum(r.kcal for r in logs)
+
+    examples = ("Necə arıqlaya bilərəm?" if goal == "lose"
+                else "Kütlə artırmaq üçün nə yeməliyəm?" if goal == "gain"
+                else "Sağlam qidalanma üçün nə məsləhət edərsiniz?")
+    cols = st.columns(3)
+    quick = [examples, "Zülalı necə artırım?", "Şəkəri necə azaldım?"]
+    picked = None
+    for col, q in zip(cols, quick):
+        if col.button(q, use_container_width=True):
+            picked = q
+
+    for role, text in st.session_state.chat:
+        with st.chat_message(role):
+            st.markdown(text)
+
+    msg = st.chat_input("Sualınızı yazın...") or picked
+    if msg:
+        st.session_state.chat.append(("user", msg))
+        with st.chat_message("user"):
+            st.markdown(msg)
+        with st.chat_message("assistant"):
+            with st.spinner("Düşünürəm..."):
+                reply = chat_answer(msg, profile,
+                                    history=st.session_state.chat[:-1],
+                                    remaining_kcal=remaining)
+            st.markdown(reply.text_az)
+            if reply.sources:
+                srcs = ", ".join(s.replace(".md", "") for s in reply.sources
+                                 if s.endswith(".md"))
+                if srcs:
+                    st.caption(f"Mənbələr: {srcs}")
+        st.session_state.chat.append(("assistant", reply.text_az))
+
+    if st.session_state.chat and st.button("🗑️ Söhbəti təmizlə"):
+        st.session_state.chat = []
+        st.rerun()
+
+# ---------- tab 5: model metrics ----------
+with tab5:
     st.header("Model nəticələri")
     metrics_path = settings.reports_dir / "metrics.json"
     if not metrics_path.exists():
