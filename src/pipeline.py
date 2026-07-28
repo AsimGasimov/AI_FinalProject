@@ -12,7 +12,7 @@ from functools import lru_cache
 
 import numpy as np
 
-from config import settings
+from config import CONFIDENCE_MIN, settings
 from src.cnn.predict import get_predictor
 from src.cv.portion import estimate_portion
 from src.cv.quality import check_quality
@@ -67,10 +67,13 @@ def analyze(img_bgr: np.ndarray, profile: UserProfile | None = None,
 
     plate = detect_plate(img_bgr)
     mask = segment_food(img_bgr, plate)
-    crop = masked_crop(img_bgr, mask)
 
     predictor = get_predictor(model_name)
-    top5 = predictor.predict(crop if crop.size else img_bgr, topk=5)
+    # Classify the FULL image. The CNN was trained on whole Food101 frames, so
+    # feeding a background-masked crop is a train/test mismatch that badly hurts
+    # accuracy (e.g. a burger gets called sushi). Segmentation is used only for
+    # portion estimation and the mask overlay, never as classifier input.
+    top5 = predictor.predict(img_bgr, topk=5)
     food_class, confidence = top5[0]
 
     portion = estimate_portion(mask, plate, food_class)
@@ -78,7 +81,9 @@ def analyze(img_bgr: np.ndarray, profile: UserProfile | None = None,
     macros, tags, az_name = macros_for(food_class, grams)
 
     meal = MealAnalysis(ok=True, food_class=food_class, az_name=az_name,
-                        confidence=round(confidence, 3), top5=top5, grams=grams,
+                        confidence=round(confidence, 3),
+                        low_confidence=confidence < CONFIDENCE_MIN,
+                        top5=top5, grams=grams,
                         portion_bucket=portion.bucket,
                         portion_confidence=portion.confidence,
                         macros=macros, tags=tags, source="photo")
@@ -98,10 +103,11 @@ def analysis_extras(img_bgr: np.ndarray, model_name: str = "effnet") -> dict:
     crop = masked_crop(img_bgr, mask)
     predictor = get_predictor(model_name)
     cam = GradCAM(predictor.model, target_layer(predictor.model, model_name))
+    # Grad-CAM on the full image so the heatmap matches what was classified.
     with torch.enable_grad():
-        heat = cam(predictor.to_tensor(crop if crop.size else img_bgr))
+        heat = cam(predictor.to_tensor(img_bgr))
     cam.close()
-    overlay = overlay_heatmap(crop if crop.size else img_bgr, heat)
+    overlay = overlay_heatmap(img_bgr, heat)
     return {"plate": plate, "mask": mask, "crop": crop, "gradcam": overlay}
 
 

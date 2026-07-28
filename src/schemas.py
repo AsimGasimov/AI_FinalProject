@@ -48,6 +48,7 @@ class MealAnalysis:
     food_class: str = ""
     az_name: str = ""
     confidence: float = 0.0
+    low_confidence: bool = False
     top5: list[tuple[str, float]] = field(default_factory=list)
     grams: float = 0.0
     portion_bucket: str = ""
