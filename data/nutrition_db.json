@@ -495,5 +495,1507 @@
       "high_sodium"
     ],
     "notes_az": "Mayonez və bekon kalorini artırır. Tam taxıl çörəklə və az sousla daha yaxşı olar."
+  },
+  "apple_pie": {
+    "az_name": "Alma piroqu",
+    "per_100g": {
+      "kcal": 237,
+      "protein_g": 2.4,
+      "carb_g": 34.0,
+      "fat_g": 11.0,
+      "fiber_g": 1.6,
+      "sugar_g": 16.0,
+      "sodium_mg": 266
+    },
+    "typical_serving_g": 125,
+    "serving_name_az": "dilim",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_carb"
+    ],
+    "notes_az": "Şəkər və xəmirdən kalorisi yüksəkdir. Kiçik dilim və şəkərsiz çay ilə balanslaşdırın."
+  },
+  "baby_back_ribs": {
+    "az_name": "Donuz qabırğası (barbekü)",
+    "per_100g": {
+      "kcal": 292,
+      "protein_g": 24.0,
+      "carb_g": 8.0,
+      "fat_g": 18.0,
+      "fiber_g": 0.3,
+      "sugar_g": 6.0,
+      "sodium_mg": 560
+    },
+    "typical_serving_g": 250,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.2,
+    "tags": [
+      "high_protein",
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Sous natriumu və şəkəri artırır. Yağsız hissələri seçib tərəvəzlə yeyin."
+  },
+  "baklava": {
+    "az_name": "Paxlava",
+    "per_100g": {
+      "kcal": 428,
+      "protein_g": 6.0,
+      "carb_g": 45.0,
+      "fat_g": 26.0,
+      "fiber_g": 2.5,
+      "sugar_g": 30.0,
+      "sodium_mg": 220
+    },
+    "typical_serving_g": 80,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Şərbət və qoz-fındıqla çox kaloridir. Bayram üçün arabir, kiçik porsiya seçin."
+  },
+  "beef_carpaccio": {
+    "az_name": "Mal əti karpaççosu",
+    "per_100g": {
+      "kcal": 190,
+      "protein_g": 20.0,
+      "carb_g": 1.0,
+      "fat_g": 12.0,
+      "fiber_g": 0.2,
+      "sugar_g": 0.3,
+      "sodium_mg": 380
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein"
+    ],
+    "notes_az": "Zülalla zəngindir. Nazik dilimlənmiş çiy ət olduğu üçün təzəliyinə diqqət edin."
+  },
+  "beef_tartare": {
+    "az_name": "Mal əti tartarı",
+    "per_100g": {
+      "kcal": 196,
+      "protein_g": 19.0,
+      "carb_g": 2.0,
+      "fat_g": 12.0,
+      "fiber_g": 0.3,
+      "sugar_g": 0.5,
+      "sodium_mg": 350
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein"
+    ],
+    "notes_az": "Çiy ət yeməyidir; keyfiyyət və gigiyena vacibdir. Zülal mənbəyidir."
+  },
+  "beet_salad": {
+    "az_name": "Çuğundur salatı",
+    "per_100g": {
+      "kcal": 90,
+      "protein_g": 2.0,
+      "carb_g": 12.0,
+      "fat_g": 4.0,
+      "fiber_g": 2.8,
+      "sugar_g": 8.0,
+      "sodium_mg": 250
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "boşqab",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "healthy_fat",
+      "high_fiber"
+    ],
+    "notes_az": "Lif və antioksidantlarla zəngin yüngül seçimdir. Şəkəri təbii çuğundurdan gəlir."
+  },
+  "beignets": {
+    "az_name": "Benye (şirin xəmir)",
+    "per_100g": {
+      "kcal": 380,
+      "protein_g": 6.0,
+      "carb_g": 45.0,
+      "fat_g": 19.0,
+      "fiber_g": 1.5,
+      "sugar_g": 15.0,
+      "sodium_mg": 300
+    },
+    "typical_serving_g": 70,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Dərin yağda qızardılıб pudra şəkəri ilə verilir. Arabir yemək daha yaxşıdır."
+  },
+  "bibimbap": {
+    "az_name": "Bibimbap",
+    "per_100g": {
+      "kcal": 130,
+      "protein_g": 6.0,
+      "carb_g": 18.0,
+      "fat_g": 4.0,
+      "fiber_g": 2.0,
+      "sugar_g": 3.0,
+      "sodium_mg": 400
+    },
+    "typical_serving_g": 400,
+    "serving_name_az": "kasa",
+    "density_g_per_cm2": 0.8,
+    "tags": [
+      "high_carb"
+    ],
+    "notes_az": "Düyü, tərəvəz və zülalla balanslı Koreya yeməyidir. Sousu az qatsanız, duz azalar."
+  },
+  "bread_pudding": {
+    "az_name": "Çörək pudinqi",
+    "per_100g": {
+      "kcal": 250,
+      "protein_g": 5.0,
+      "carb_g": 35.0,
+      "fat_g": 10.0,
+      "fiber_g": 1.0,
+      "sugar_g": 20.0,
+      "sodium_mg": 260
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_carb"
+    ],
+    "notes_az": "Şəkər və çörəkdən kalorisi yüksəkdir. Meyvə əlavəsi ilə lif dəyərini artırın."
+  },
+  "breakfast_burrito": {
+    "az_name": "Səhər burritosu",
+    "per_100g": {
+      "kcal": 210,
+      "protein_g": 9.0,
+      "carb_g": 20.0,
+      "fat_g": 11.0,
+      "fiber_g": 1.8,
+      "sugar_g": 1.5,
+      "sodium_mg": 480
+    },
+    "typical_serving_g": 220,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Yumurta və tərəvəzlə doyumlu səhər yeməyidir. Emal olunmuş ət natriumu artırır."
+  },
+  "bruschetta": {
+    "az_name": "Brusketta",
+    "per_100g": {
+      "kcal": 200,
+      "protein_g": 5.0,
+      "carb_g": 25.0,
+      "fat_g": 9.0,
+      "fiber_g": 1.8,
+      "sugar_g": 2.5,
+      "sodium_mg": 380
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_carb"
+    ],
+    "notes_az": "Zeytun yağı və pomidorla yüngül başlanğıcdır. Çörək miqdarı kalorini müəyyən edir."
+  },
+  "cannoli": {
+    "az_name": "Kannoli",
+    "per_100g": {
+      "kcal": 350,
+      "protein_g": 6.0,
+      "carb_g": 40.0,
+      "fat_g": 18.0,
+      "fiber_g": 1.0,
+      "sugar_g": 25.0,
+      "sodium_mg": 180
+    },
+    "typical_serving_g": 90,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Şirin rikotta doldurması ilə kaloridir. Kiçik ölçü seçib şəkərə diqqət edin."
+  },
+  "caprese_salad": {
+    "az_name": "Kapreze salatı",
+    "per_100g": {
+      "kcal": 150,
+      "protein_g": 8.0,
+      "carb_g": 4.0,
+      "fat_g": 11.0,
+      "fiber_g": 0.8,
+      "sugar_g": 3.0,
+      "sodium_mg": 280
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "boşqab",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "healthy_fat"
+    ],
+    "notes_az": "Mozzarella, pomidor və reyhanla yüngül seçimdir. Zeytun yağını ölçülü işlədin."
+  },
+  "carrot_cake": {
+    "az_name": "Yerkökü tortu",
+    "per_100g": {
+      "kcal": 340,
+      "protein_g": 4.0,
+      "carb_g": 45.0,
+      "fat_g": 16.0,
+      "fiber_g": 1.5,
+      "sugar_g": 32.0,
+      "sodium_mg": 300
+    },
+    "typical_serving_g": 110,
+    "serving_name_az": "dilim",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Yerkökünə baxmayaraq şəkər və krem yüksəkdir. Kiçik dilimlə kifayətlənin."
+  },
+  "ceviche": {
+    "az_name": "Seviçe (marinadlanmış balıq)",
+    "per_100g": {
+      "kcal": 110,
+      "protein_g": 18.0,
+      "carb_g": 4.0,
+      "fat_g": 2.0,
+      "fiber_g": 0.5,
+      "sugar_g": 1.5,
+      "sodium_mg": 350
+    },
+    "typical_serving_g": 180,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.8,
+    "tags": [
+      "high_protein"
+    ],
+    "notes_az": "Sitrusla marinadlanmış yüngül, zülallı balıq yeməyidir. Yağı azdır."
+  },
+  "cheese_plate": {
+    "az_name": "Pendir boşqabı",
+    "per_100g": {
+      "kcal": 370,
+      "protein_g": 22.0,
+      "carb_g": 3.0,
+      "fat_g": 30.0,
+      "fiber_g": 0.0,
+      "sugar_g": 1.0,
+      "sodium_mg": 620
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_fat",
+      "high_sodium",
+      "high_protein"
+    ],
+    "notes_az": "Doymuş yağ və natrium yüksəkdir. Kiçik porsiya və meyvə ilə balanslaşdırın."
+  },
+  "chicken_quesadilla": {
+    "az_name": "Toyuqlu kesadiya",
+    "per_100g": {
+      "kcal": 260,
+      "protein_g": 15.0,
+      "carb_g": 22.0,
+      "fat_g": 13.0,
+      "fiber_g": 1.5,
+      "sugar_g": 2.0,
+      "sodium_mg": 520
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Pendir və tortilyadan yağlıdır. Bol tərəvəz və az pendir daha balanslıdır."
+  },
+  "chicken_wings": {
+    "az_name": "Toyuq qanadı",
+    "per_100g": {
+      "kcal": 290,
+      "protein_g": 26.0,
+      "carb_g": 2.0,
+      "fat_g": 20.0,
+      "fiber_g": 0.1,
+      "sugar_g": 0.5,
+      "sodium_mg": 500
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_protein",
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Sous və qızartma natriumu artırır. Fırında bişmiş variant daha yüngüldür."
+  },
+  "chocolate_cake": {
+    "az_name": "Şokoladlı tort",
+    "per_100g": {
+      "kcal": 371,
+      "protein_g": 5.0,
+      "carb_g": 50.0,
+      "fat_g": 17.0,
+      "fiber_g": 2.0,
+      "sugar_g": 36.0,
+      "sodium_mg": 320
+    },
+    "typical_serving_g": 110,
+    "serving_name_az": "dilim",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Şəkər çox yüksəkdir. Nadir hallarda və kiçik dilimlə yemək məsləhətdir."
+  },
+  "chocolate_mousse": {
+    "az_name": "Şokoladlı mus",
+    "per_100g": {
+      "kcal": 225,
+      "protein_g": 4.0,
+      "carb_g": 22.0,
+      "fat_g": 14.0,
+      "fiber_g": 1.5,
+      "sugar_g": 18.0,
+      "sodium_mg": 60
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.7,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Kremli desertdir. Qara şokolad variantı bir qədər az şəkərli olur."
+  },
+  "churros": {
+    "az_name": "Çurro",
+    "per_100g": {
+      "kcal": 356,
+      "protein_g": 4.0,
+      "carb_g": 43.0,
+      "fat_g": 19.0,
+      "fiber_g": 1.0,
+      "sugar_g": 12.0,
+      "sodium_mg": 320
+    },
+    "typical_serving_g": 70,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Qızardılıб şəkərə bulanır. Şokolad sousu kalorini daha da artırır."
+  },
+  "clam_chowder": {
+    "az_name": "Midyə şorbası (kremli)",
+    "per_100g": {
+      "kcal": 90,
+      "protein_g": 5.0,
+      "carb_g": 9.0,
+      "fat_g": 4.0,
+      "fiber_g": 0.5,
+      "sugar_g": 1.5,
+      "sodium_mg": 400
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "kasa",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Krem əsaslı olduğu üçün yağlıdır. Duzu yüksəkdir, ölçülü için."
+  },
+  "crab_cakes": {
+    "az_name": "Yengəc kotleti",
+    "per_100g": {
+      "kcal": 220,
+      "protein_g": 14.0,
+      "carb_g": 10.0,
+      "fat_g": 14.0,
+      "fiber_g": 0.5,
+      "sugar_g": 1.0,
+      "sodium_mg": 480
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein",
+      "high_sodium"
+    ],
+    "notes_az": "Dəniz məhsulu zülalı verir, amma qızartma və sous natriumu artırır."
+  },
+  "creme_brulee": {
+    "az_name": "Krem brüle",
+    "per_100g": {
+      "kcal": 300,
+      "protein_g": 4.0,
+      "carb_g": 25.0,
+      "fat_g": 20.0,
+      "fiber_g": 0.0,
+      "sugar_g": 22.0,
+      "sodium_mg": 55
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Qaymaq və şəkərlə çox kaloridir. Kiçik porsiya seçin."
+  },
+  "croque_madame": {
+    "az_name": "Krok-madam",
+    "per_100g": {
+      "kcal": 280,
+      "protein_g": 15.0,
+      "carb_g": 20.0,
+      "fat_g": 16.0,
+      "fiber_g": 1.0,
+      "sugar_g": 3.0,
+      "sodium_mg": 620
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Pendir, vetçina və yumurta ilə yağlı və duzludur. Yanında salat yaxşı gedir."
+  },
+  "cup_cakes": {
+    "az_name": "Kekslər (cupcake)",
+    "per_100g": {
+      "kcal": 305,
+      "protein_g": 3.5,
+      "carb_g": 45.0,
+      "fat_g": 13.0,
+      "fiber_g": 0.8,
+      "sugar_g": 33.0,
+      "sodium_mg": 250
+    },
+    "typical_serving_g": 65,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.7,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Krem və şəkərdən kalorisi yüksəkdir. Bir ədədlə kifayətlənin."
+  },
+  "deviled_eggs": {
+    "az_name": "Doldurulmuş yumurta",
+    "per_100g": {
+      "kcal": 190,
+      "protein_g": 10.0,
+      "carb_g": 1.0,
+      "fat_g": 16.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.6,
+      "sodium_mg": 320
+    },
+    "typical_serving_g": 60,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein",
+      "high_fat"
+    ],
+    "notes_az": "Zülal mənbəyidir; mayonez yağı artırır. Yunan qatığı ilə daha yüngül olar."
+  },
+  "edamame": {
+    "az_name": "Edamame (soya paxlası)",
+    "per_100g": {
+      "kcal": 121,
+      "protein_g": 12.0,
+      "carb_g": 9.0,
+      "fat_g": 5.0,
+      "fiber_g": 5.2,
+      "sugar_g": 2.0,
+      "sodium_mg": 6
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.7,
+    "tags": [
+      "vegetarian",
+      "high_protein",
+      "high_fiber"
+    ],
+    "notes_az": "Bitki zülalı və lifi ilə çox sağlam qəlyanaltıdır. Duz əlavə etməyə ehtiyac yoxdur."
+  },
+  "eggs_benedict": {
+    "az_name": "Benedikt yumurtası",
+    "per_100g": {
+      "kcal": 240,
+      "protein_g": 12.0,
+      "carb_g": 14.0,
+      "fat_g": 15.0,
+      "fiber_g": 0.8,
+      "sugar_g": 1.5,
+      "sodium_mg": 500
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_fat",
+      "high_sodium",
+      "high_protein"
+    ],
+    "notes_az": "Hollandez sousu yağ və kalorini artırır. Zülalla zəngin səhər yeməyidir."
+  },
+  "escargots": {
+    "az_name": "İlbiz (escargot)",
+    "per_100g": {
+      "kcal": 170,
+      "protein_g": 16.0,
+      "carb_g": 2.0,
+      "fat_g": 11.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 380
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_protein"
+    ],
+    "notes_az": "Az karbohidratlı zülal mənbəyidir. Kalorinin çoxu sarımsaqlı kərə yağından gəlir."
+  },
+  "filet_mignon": {
+    "az_name": "File minyon",
+    "per_100g": {
+      "kcal": 267,
+      "protein_g": 27.0,
+      "carb_g": 0.0,
+      "fat_g": 17.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 55
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.3,
+    "tags": [
+      "high_protein",
+      "high_fat"
+    ],
+    "notes_az": "Yağsız və zülalla zəngin steykdir. Tərəvəzlə birlikdə balanslı olur."
+  },
+  "fish_and_chips": {
+    "az_name": "Balıq və kartof (fish and chips)",
+    "per_100g": {
+      "kcal": 230,
+      "protein_g": 12.0,
+      "carb_g": 22.0,
+      "fat_g": 11.0,
+      "fiber_g": 1.5,
+      "sugar_g": 0.5,
+      "sodium_mg": 380
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_carb",
+      "high_fat"
+    ],
+    "notes_az": "Xəmir və qızartma kalorini artırır. Fırında bişmiş balıq daha yüngüldür."
+  },
+  "foie_gras": {
+    "az_name": "Fua-qra (qaz ciyəri)",
+    "per_100g": {
+      "kcal": 462,
+      "protein_g": 11.0,
+      "carb_g": 4.6,
+      "fat_g": 44.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 700
+    },
+    "typical_serving_g": 60,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Çox yüksək yağ və natrium var. Yalnız kiçik miqdarda dadmaq məsləhətdir."
+  },
+  "french_onion_soup": {
+    "az_name": "Fransız soğan şorbası",
+    "per_100g": {
+      "kcal": 70,
+      "protein_g": 4.0,
+      "carb_g": 7.0,
+      "fat_g": 3.0,
+      "fiber_g": 1.0,
+      "sugar_g": 3.0,
+      "sodium_mg": 450
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "kasa",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Bulyon və pendirdən duzu yüksəkdir. Çörək qatı kalorini artırır."
+  },
+  "french_toast": {
+    "az_name": "Fransız tostu",
+    "per_100g": {
+      "kcal": 229,
+      "protein_g": 8.0,
+      "carb_g": 25.0,
+      "fat_g": 11.0,
+      "fiber_g": 1.2,
+      "sugar_g": 8.0,
+      "sodium_mg": 350
+    },
+    "typical_serving_g": 130,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.8,
+    "tags": [
+      "high_carb",
+      "high_sugar"
+    ],
+    "notes_az": "Sirop əlavə etməzdən əvvəl kalorini nəzərə alın. Meyvə ilə daha balanslıdır."
+  },
+  "fried_calamari": {
+    "az_name": "Qızardılmış kalmar",
+    "per_100g": {
+      "kcal": 175,
+      "protein_g": 15.0,
+      "carb_g": 8.0,
+      "fat_g": 9.0,
+      "fiber_g": 0.3,
+      "sugar_g": 0.5,
+      "sodium_mg": 300
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein",
+      "high_fat"
+    ],
+    "notes_az": "Dəniz məhsulu zülalı verir, amma xəmir və qızartma yağı artırır."
+  },
+  "frozen_yogurt": {
+    "az_name": "Dondurulmuş yoqurt",
+    "per_100g": {
+      "kcal": 127,
+      "protein_g": 3.0,
+      "carb_g": 24.0,
+      "fat_g": 4.0,
+      "fiber_g": 0.0,
+      "sugar_g": 20.0,
+      "sodium_mg": 65
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.7,
+    "tags": [
+      "high_sugar"
+    ],
+    "notes_az": "Dondurmadan az yağlı ola bilər, amma şəkəri yüksəkdir. Meyvə əlavəsi yaxşıdır."
+  },
+  "garlic_bread": {
+    "az_name": "Sarımsaqlı çörək",
+    "per_100g": {
+      "kcal": 330,
+      "protein_g": 8.0,
+      "carb_g": 40.0,
+      "fat_g": 15.0,
+      "fiber_g": 2.0,
+      "sugar_g": 2.5,
+      "sodium_mg": 550
+    },
+    "typical_serving_g": 80,
+    "serving_name_az": "dilim",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_carb",
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Kərə yağı və çörəkdən kaloridir. Bir-iki dilimlə kifayətlənin."
+  },
+  "gnocchi": {
+    "az_name": "Nyokki",
+    "per_100g": {
+      "kcal": 130,
+      "protein_g": 4.0,
+      "carb_g": 24.0,
+      "fat_g": 2.0,
+      "fiber_g": 1.5,
+      "sugar_g": 1.0,
+      "sodium_mg": 300
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_carb"
+    ],
+    "notes_az": "Kartof əsaslı makarondur. Sous seçimi ümumi kalorini müəyyən edir."
+  },
+  "grilled_cheese_sandwich": {
+    "az_name": "Pendirli tost",
+    "per_100g": {
+      "kcal": 350,
+      "protein_g": 13.0,
+      "carb_g": 28.0,
+      "fat_g": 20.0,
+      "fiber_g": 1.5,
+      "sugar_g": 3.0,
+      "sodium_mg": 640
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Pendir və kərə yağından yağlıdır. Tam taxıl çörək və pomidor əlavə edin."
+  },
+  "gyoza": {
+    "az_name": "Gyoza",
+    "per_100g": {
+      "kcal": 210,
+      "protein_g": 8.0,
+      "carb_g": 24.0,
+      "fat_g": 9.0,
+      "fiber_g": 1.2,
+      "sugar_g": 1.5,
+      "sodium_mg": 450
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_carb",
+      "high_sodium"
+    ],
+    "notes_az": "Buxarda bişmiş variant qızardılmışdan yüngüldür. Soya sousunu az işlədin."
+  },
+  "hot_and_sour_soup": {
+    "az_name": "İsti-turş şorba",
+    "per_100g": {
+      "kcal": 55,
+      "protein_g": 4.0,
+      "carb_g": 6.0,
+      "fat_g": 2.0,
+      "fiber_g": 0.6,
+      "sugar_g": 2.0,
+      "sodium_mg": 500
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "kasa",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Kalorisi aşağı, amma duzu yüksəkdir. Yüngül başlanğıc üçün yaxşıdır."
+  },
+  "huevos_rancheros": {
+    "az_name": "Uevos rançeros",
+    "per_100g": {
+      "kcal": 155,
+      "protein_g": 8.0,
+      "carb_g": 12.0,
+      "fat_g": 9.0,
+      "fiber_g": 2.0,
+      "sugar_g": 2.0,
+      "sodium_mg": 400
+    },
+    "typical_serving_g": 250,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Yumurta, lobya və tərəvəzlə doyumlu səhər yeməyidir. Sous natriumu artırır."
+  },
+  "hummus": {
+    "az_name": "Hümus",
+    "per_100g": {
+      "kcal": 166,
+      "protein_g": 8.0,
+      "carb_g": 14.0,
+      "fat_g": 10.0,
+      "fiber_g": 6.0,
+      "sugar_g": 0.4,
+      "sodium_mg": 380
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.8,
+    "tags": [
+      "vegetarian",
+      "high_fiber",
+      "healthy_fat"
+    ],
+    "notes_az": "Noxud və küncüt pastasından lif və bitki zülalı verir. Tərəvəzlə yaxşı gedir."
+  },
+  "lobster_bisque": {
+    "az_name": "Omar şorbası (bisque)",
+    "per_100g": {
+      "kcal": 105,
+      "protein_g": 5.0,
+      "carb_g": 8.0,
+      "fat_g": 6.0,
+      "fiber_g": 0.3,
+      "sugar_g": 2.0,
+      "sodium_mg": 500
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "kasa",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Krem əsaslıdır, ona görə yağlı və duzludur. Ölçülü porsiya seçin."
+  },
+  "lobster_roll_sandwich": {
+    "az_name": "Omarlı sendviç",
+    "per_100g": {
+      "kcal": 240,
+      "protein_g": 12.0,
+      "carb_g": 20.0,
+      "fat_g": 12.0,
+      "fiber_g": 1.0,
+      "sugar_g": 2.5,
+      "sodium_mg": 560
+    },
+    "typical_serving_g": 180,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Mayonez kalorini artırır. Dəniz məhsulu zülal mənbəyidir."
+  },
+  "macaroni_and_cheese": {
+    "az_name": "Pendirli makaron",
+    "per_100g": {
+      "kcal": 190,
+      "protein_g": 8.0,
+      "carb_g": 20.0,
+      "fat_g": 9.0,
+      "fiber_g": 1.0,
+      "sugar_g": 3.0,
+      "sodium_mg": 440
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_carb",
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Pendir sousundan yağlı və duzludur. Tam taxıl makaron və tərəvəz əlavə edin."
+  },
+  "macarons": {
+    "az_name": "Makaron (fransız)",
+    "per_100g": {
+      "kcal": 380,
+      "protein_g": 7.0,
+      "carb_g": 55.0,
+      "fat_g": 15.0,
+      "fiber_g": 2.0,
+      "sugar_g": 48.0,
+      "sodium_mg": 60
+    },
+    "typical_serving_g": 20,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.8,
+    "tags": [
+      "high_sugar"
+    ],
+    "notes_az": "Kiçik olsa da şəkəri çox yüksəkdir. Bir-iki ədədlə kifayətlənin."
+  },
+  "miso_soup": {
+    "az_name": "Miso şorbası",
+    "per_100g": {
+      "kcal": 40,
+      "protein_g": 3.0,
+      "carb_g": 4.0,
+      "fat_g": 1.5,
+      "fiber_g": 0.8,
+      "sugar_g": 1.0,
+      "sodium_mg": 600
+    },
+    "typical_serving_g": 250,
+    "serving_name_az": "kasa",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Kalorisi çox aşağıdır, amma natriumu yüksəkdir. Yüngül başlanğıc üçün yaxşıdır."
+  },
+  "mussels": {
+    "az_name": "Midyə",
+    "per_100g": {
+      "kcal": 172,
+      "protein_g": 24.0,
+      "carb_g": 7.0,
+      "fat_g": 4.5,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 370
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein"
+    ],
+    "notes_az": "Zülal, dəmir və B12 ilə zəngindir. Yağı azdır; təzəliyinə diqqət edin."
+  },
+  "nachos": {
+    "az_name": "Naços",
+    "per_100g": {
+      "kcal": 310,
+      "protein_g": 8.0,
+      "carb_g": 32.0,
+      "fat_g": 17.0,
+      "fiber_g": 3.0,
+      "sugar_g": 1.5,
+      "sodium_mg": 550
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "fast_food",
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Pendir və çipsdən yağlı və duzludur. Bol tərəvəz və lobya əlavə etmək daha yaxşıdır."
+  },
+  "onion_rings": {
+    "az_name": "Soğan halqaları",
+    "per_100g": {
+      "kcal": 332,
+      "protein_g": 4.5,
+      "carb_g": 38.0,
+      "fat_g": 18.0,
+      "fiber_g": 1.8,
+      "sugar_g": 4.0,
+      "sodium_mg": 430
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.5,
+    "tags": [
+      "fast_food",
+      "high_fat",
+      "high_carb"
+    ],
+    "notes_az": "Xəmir və qızartmadan kalorisi yüksəkdir. Arabir və kiçik porsiya seçin."
+  },
+  "oysters": {
+    "az_name": "İstridyə",
+    "per_100g": {
+      "kcal": 81,
+      "protein_g": 9.0,
+      "carb_g": 5.0,
+      "fat_g": 2.3,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 210
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein"
+    ],
+    "notes_az": "Az kalorili, sink və dəmirlə zəngindir. Təzəliyi çox vacibdir."
+  },
+  "pad_thai": {
+    "az_name": "Pad-tay",
+    "per_100g": {
+      "kcal": 150,
+      "protein_g": 7.0,
+      "carb_g": 20.0,
+      "fat_g": 5.0,
+      "fiber_g": 1.5,
+      "sugar_g": 5.0,
+      "sodium_mg": 470
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "boşqab",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_carb",
+      "high_sodium"
+    ],
+    "notes_az": "Düyü əriştəsi əsaslıdır; sous şəkər və duz əlavə edir. Zülal və tərəvəzlə balanslaşdırın."
+  },
+  "paella": {
+    "az_name": "Paelya",
+    "per_100g": {
+      "kcal": 160,
+      "protein_g": 9.0,
+      "carb_g": 20.0,
+      "fat_g": 5.0,
+      "fiber_g": 1.0,
+      "sugar_g": 1.5,
+      "sodium_mg": 420
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "boşqab",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_carb",
+      "high_sodium"
+    ],
+    "notes_az": "Düyü, dəniz məhsulu və ətlə doyumlu yeməkdir. Porsiya ölçüsünə diqqət edin."
+  },
+  "panna_cotta": {
+    "az_name": "Panna-kotta",
+    "per_100g": {
+      "kcal": 240,
+      "protein_g": 3.5,
+      "carb_g": 22.0,
+      "fat_g": 15.0,
+      "fiber_g": 0.0,
+      "sugar_g": 20.0,
+      "sodium_mg": 45
+    },
+    "typical_serving_g": 110,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Qaymaq əsaslı desertdir. Meyvə sousu ilə şəkəri təbii şəkildə balanslaşdırın."
+  },
+  "peking_duck": {
+    "az_name": "Pekin ördəyi",
+    "per_100g": {
+      "kcal": 240,
+      "protein_g": 19.0,
+      "carb_g": 4.0,
+      "fat_g": 17.0,
+      "fiber_g": 0.2,
+      "sugar_g": 2.0,
+      "sodium_mg": 400
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_protein",
+      "high_fat"
+    ],
+    "notes_az": "Dərisi yağlıdır. Zülal mənbəyidir, dərisiz hissə daha yüngüldür."
+  },
+  "pho": {
+    "az_name": "Fo (Vyetnam şorbası)",
+    "per_100g": {
+      "kcal": 70,
+      "protein_g": 6.0,
+      "carb_g": 9.0,
+      "fat_g": 1.5,
+      "fiber_g": 0.5,
+      "sugar_g": 1.0,
+      "sodium_mg": 400
+    },
+    "typical_serving_g": 500,
+    "serving_name_az": "kasa",
+    "density_g_per_cm2": 0.6,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Bulyonun duzu yüksəkdir. Bol tərəvəz və zülalla doyumlu, aşağı kalorili seçimdir."
+  },
+  "pork_chop": {
+    "az_name": "Donuz kotleti",
+    "per_100g": {
+      "kcal": 231,
+      "protein_g": 26.0,
+      "carb_g": 0.0,
+      "fat_g": 14.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 60
+    },
+    "typical_serving_g": 200,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.2,
+    "tags": [
+      "high_protein",
+      "high_fat"
+    ],
+    "notes_az": "Zülalla zəngindir. Yağsız hissəni seçib tərəvəzlə yemək məsləhətdir."
+  },
+  "poutine": {
+    "az_name": "Putin (kartof-pendir)",
+    "per_100g": {
+      "kcal": 230,
+      "protein_g": 6.0,
+      "carb_g": 24.0,
+      "fat_g": 12.0,
+      "fiber_g": 2.0,
+      "sugar_g": 1.0,
+      "sodium_mg": 500
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "fast_food",
+      "high_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Kartof, pendir və sousdan çox kaloridir. Arabir və kiçik porsiya seçin."
+  },
+  "prime_rib": {
+    "az_name": "Prime rib (mal əti)",
+    "per_100g": {
+      "kcal": 290,
+      "protein_g": 25.0,
+      "carb_g": 0.0,
+      "fat_g": 21.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 55
+    },
+    "typical_serving_g": 250,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.3,
+    "tags": [
+      "high_protein",
+      "high_fat"
+    ],
+    "notes_az": "Zülalla zəngin, amma yağlı ət kəsimidir. Porsiyanı ölçülü saxlayın."
+  },
+  "pulled_pork_sandwich": {
+    "az_name": "Donuz ətli sendviç",
+    "per_100g": {
+      "kcal": 250,
+      "protein_g": 15.0,
+      "carb_g": 24.0,
+      "fat_g": 10.0,
+      "fiber_g": 1.2,
+      "sugar_g": 8.0,
+      "sodium_mg": 560
+    },
+    "typical_serving_g": 220,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Barbekü sousu şəkər və natriumu artırır. Yanında salatla balanslaşdırın."
+  },
+  "ravioli": {
+    "az_name": "Ravioli",
+    "per_100g": {
+      "kcal": 160,
+      "protein_g": 7.0,
+      "carb_g": 22.0,
+      "fat_g": 5.0,
+      "fiber_g": 1.5,
+      "sugar_g": 2.0,
+      "sodium_mg": 350
+    },
+    "typical_serving_g": 220,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_carb"
+    ],
+    "notes_az": "Doldurmadan asılı olaraq kalori dəyişir. Pomidor sousu kremliyə nisbətən yüngüldür."
+  },
+  "red_velvet_cake": {
+    "az_name": "Qırmızı məxmər tortu",
+    "per_100g": {
+      "kcal": 370,
+      "protein_g": 4.0,
+      "carb_g": 50.0,
+      "fat_g": 18.0,
+      "fiber_g": 1.0,
+      "sugar_g": 38.0,
+      "sodium_mg": 300
+    },
+    "typical_serving_g": 110,
+    "serving_name_az": "dilim",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Krem-pendir qlazuru ilə şəkəri çox yüksəkdir. Kiçik dilim seçin."
+  },
+  "risotto": {
+    "az_name": "Rizotto",
+    "per_100g": {
+      "kcal": 170,
+      "protein_g": 4.0,
+      "carb_g": 24.0,
+      "fat_g": 6.0,
+      "fiber_g": 0.8,
+      "sugar_g": 1.0,
+      "sodium_mg": 360
+    },
+    "typical_serving_g": 250,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_carb"
+    ],
+    "notes_az": "Kərə yağı və pendir kalorini artırır. Göbələk və tərəvəzli variant daha yüngüldür."
+  },
+  "samosa": {
+    "az_name": "Samosa",
+    "per_100g": {
+      "kcal": 262,
+      "protein_g": 5.0,
+      "carb_g": 30.0,
+      "fat_g": 13.0,
+      "fiber_g": 2.5,
+      "sugar_g": 2.0,
+      "sodium_mg": 420
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.8,
+    "tags": [
+      "vegetarian",
+      "high_carb",
+      "high_fat"
+    ],
+    "notes_az": "Qızardılmış xəmir yağı artırır. Fırında bişmiş variant daha sağlamdır."
+  },
+  "sashimi": {
+    "az_name": "Saşimi",
+    "per_100g": {
+      "kcal": 130,
+      "protein_g": 22.0,
+      "carb_g": 0.5,
+      "fat_g": 4.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 60
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 1.0,
+    "tags": [
+      "high_protein"
+    ],
+    "notes_az": "Çiy balıqdır; zülal və omeqa-3 verir, karbohidratı yoxdur. Təzəliyi vacibdir."
+  },
+  "scallops": {
+    "az_name": "Taraq (scallop)",
+    "per_100g": {
+      "kcal": 111,
+      "protein_g": 20.0,
+      "carb_g": 5.0,
+      "fat_g": 0.8,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 570
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein",
+      "high_sodium"
+    ],
+    "notes_az": "Az yağlı, yüksək zülallı dəniz məhsuludur. Duzu təbii olaraq yüksəkdir."
+  },
+  "seaweed_salad": {
+    "az_name": "Dəniz yosunu salatı",
+    "per_100g": {
+      "kcal": 70,
+      "protein_g": 1.5,
+      "carb_g": 9.0,
+      "fat_g": 3.5,
+      "fiber_g": 1.5,
+      "sugar_g": 1.0,
+      "sodium_mg": 400
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.7,
+    "tags": [
+      "healthy_fat",
+      "high_sodium"
+    ],
+    "notes_az": "Yod və mineral mənbəyidir. Sousdan duzu yüksək ola bilər."
+  },
+  "shrimp_and_grits": {
+    "az_name": "Karides və qarğıdalı sıyığı",
+    "per_100g": {
+      "kcal": 150,
+      "protein_g": 9.0,
+      "carb_g": 15.0,
+      "fat_g": 6.0,
+      "fiber_g": 0.8,
+      "sugar_g": 0.5,
+      "sodium_mg": 420
+    },
+    "typical_serving_g": 250,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sodium"
+    ],
+    "notes_az": "Karides zülal verir; kərə yağı və pendir kalorini artırır."
+  },
+  "spaghetti_carbonara": {
+    "az_name": "Karbonara spagetti",
+    "per_100g": {
+      "kcal": 190,
+      "protein_g": 8.0,
+      "carb_g": 22.0,
+      "fat_g": 8.0,
+      "fiber_g": 1.2,
+      "sugar_g": 1.5,
+      "sodium_mg": 400
+    },
+    "typical_serving_g": 300,
+    "serving_name_az": "boşqab",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_carb",
+      "high_fat"
+    ],
+    "notes_az": "Yumurta, pendir və bekondan yağlıdır. Porsiyanı ölçülü saxlayın."
+  },
+  "spring_rolls": {
+    "az_name": "Bahar rulonu",
+    "per_100g": {
+      "kcal": 150,
+      "protein_g": 4.0,
+      "carb_g": 20.0,
+      "fat_g": 6.0,
+      "fiber_g": 1.5,
+      "sugar_g": 3.0,
+      "sodium_mg": 380
+    },
+    "typical_serving_g": 100,
+    "serving_name_az": "ədəd",
+    "density_g_per_cm2": 0.8,
+    "tags": [
+      "high_carb"
+    ],
+    "notes_az": "Təzə (bişməmiş) variant qızardılmışdan daha yüngüldür. Tərəvəzlə doludur."
+  },
+  "strawberry_shortcake": {
+    "az_name": "Çiyələkli tort",
+    "per_100g": {
+      "kcal": 290,
+      "protein_g": 4.0,
+      "carb_g": 42.0,
+      "fat_g": 12.0,
+      "fiber_g": 1.5,
+      "sugar_g": 28.0,
+      "sodium_mg": 250
+    },
+    "typical_serving_g": 120,
+    "serving_name_az": "dilim",
+    "density_g_per_cm2": 0.8,
+    "tags": [
+      "high_sugar"
+    ],
+    "notes_az": "Çiyələk vitamin verir, amma qaymaq və şəkər kalorini artırır."
+  },
+  "takoyaki": {
+    "az_name": "Takoyaki",
+    "per_100g": {
+      "kcal": 190,
+      "protein_g": 7.0,
+      "carb_g": 22.0,
+      "fat_g": 8.0,
+      "fiber_g": 0.8,
+      "sugar_g": 2.0,
+      "sodium_mg": 450
+    },
+    "typical_serving_g": 150,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_carb",
+      "high_sodium"
+    ],
+    "notes_az": "Xəmir və sousdan karbohidrat və duzu yüksəkdir. Ölçülü porsiya seçin."
+  },
+  "tiramisu": {
+    "az_name": "Tiramisu",
+    "per_100g": {
+      "kcal": 283,
+      "protein_g": 5.0,
+      "carb_g": 30.0,
+      "fat_g": 16.0,
+      "fiber_g": 0.6,
+      "sugar_g": 22.0,
+      "sodium_mg": 90
+    },
+    "typical_serving_g": 110,
+    "serving_name_az": "dilim",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_sugar",
+      "high_fat"
+    ],
+    "notes_az": "Maskarpone və şəkərlə kaloridir. Kiçik dilimlə kifayətlənin."
+  },
+  "tuna_tartare": {
+    "az_name": "Ton balığı tartarı",
+    "per_100g": {
+      "kcal": 150,
+      "protein_g": 22.0,
+      "carb_g": 2.0,
+      "fat_g": 6.0,
+      "fiber_g": 0.3,
+      "sugar_g": 0.5,
+      "sodium_mg": 350
+    },
+    "typical_serving_g": 130,
+    "serving_name_az": "porsiya",
+    "density_g_per_cm2": 0.9,
+    "tags": [
+      "high_protein"
+    ],
+    "notes_az": "Çiy ton zülal və omeqa-3 verir. Təzəlik və gigiyena vacibdir."
   }
 }

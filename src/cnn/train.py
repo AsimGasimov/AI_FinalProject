@@ -88,8 +88,12 @@ def train_one_epoch(model: nn.Module, loader: DataLoader, opt: torch.optim.Optim
 
 def run_training(model_name: str, epochs: int, bs: int, lr: float,
                  mixed_precision: bool, limit: int | None,
-                 num_workers: int | None) -> dict:
-    """Full training loop with phases, early stopping, checkpointing."""
+                 num_workers: int | None, smoke: bool = False) -> dict:
+    """Full training loop with phases, early stopping, checkpointing.
+
+    Smoke runs (``smoke=True``) save to ``{model}_smoke.pt`` so a quick ETA
+    measurement can never clobber a real ``{model}_best.pt`` checkpoint.
+    """
     set_seed()
     device = settings.resolve_device()
     use_amp = mixed_precision and device == "cuda"
@@ -110,7 +114,8 @@ def run_training(model_name: str, epochs: int, bs: int, lr: float,
 
     history: list[dict] = []
     best_f1, patience, bad_epochs, epoch_idx = -1.0, 3, 0, 0
-    ckpt_path = settings.models_dir / f"{model_name}_best.pt"
+    # Smoke runs must never clobber the real best checkpoint.
+    ckpt_path = settings.models_dir / f"{model_name}_{'smoke' if smoke else 'best'}.pt"
     t0 = time.time()
 
     for phase_name, phase_epochs, phase_lr in phases:
@@ -180,7 +185,8 @@ def main() -> None:
     limit = 200 if args.smoke else None
     epochs = 1 if args.smoke else args.epochs
     res = run_training(args.model, epochs, args.bs, args.lr,
-                       args.mixed_precision, limit, args.num_workers)
+                       args.mixed_precision, limit, args.num_workers,
+                       smoke=args.smoke)
     print(json.dumps(res, ensure_ascii=False, indent=2))
 
 
