@@ -16,4 +16,4 @@
 - [ ] Prompt 10 — portion_validation.md, nlp_eval.md, results.ipynb
 - [ ] Prompt 11 — README + PRESENTATION_OUTLINE.md
 - [ ] Prompt 12 — pytest/ruff/mypy, DoD checklist, clean-clone test → STOP 4
-- [x] GitHub: pushed after each step (github.com/vagifsamm/foodlens)
+- [x] GitHub: pushed after each step (github.com/AsimGasimov/AI_FinalProject)

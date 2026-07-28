@@ -81,4 +81,4 @@ ship a solid, honest 25-class system rather than a shaky 50-class one.
 - ✅ CNN / CV / NLP layers are all real (no API shortcuts).
 - ✅ Seeds fixed at 42 everywhere.
 - ✅ Errors reported honestly (portion MAE, RAG misses, weak baseline).
-- ✅ Repo public: https://github.com/vagifsamm/foodlens
+- ✅ Repo public: https://github.com/AsimGasimov/AI_FinalProject

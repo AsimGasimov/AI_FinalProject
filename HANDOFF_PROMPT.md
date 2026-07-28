@@ -11,8 +11,8 @@ autonomously; do not ask me to write code.
 ## Get the code
 
 ```
-git clone https://github.com/vagifsamm/foodlens.git
-cd foodlens
+git clone https://github.com/AsimGasimov/AI_FinalProject.git
+cd AI_FinalProject
 ```
 
 The trained checkpoints are **already in the repo** (`models/effnet_best.pt`,
