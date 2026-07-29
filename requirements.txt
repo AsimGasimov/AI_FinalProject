@@ -12,6 +12,7 @@ pillow>=10.4
 sentence-transformers>=3.3,<6
 transformers>=4.48,<5
 anthropic>=0.40
+openai>=1.50
 
 fastapi>=0.115,<1
 uvicorn[standard]>=0.32,<1

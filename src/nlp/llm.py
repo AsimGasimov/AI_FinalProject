@@ -27,6 +27,20 @@ def _generate_anthropic(system: str, user: str) -> str:
     return "".join(b.text for b in msg.content if b.type == "text").strip()
 
 
+def _generate_openai(system: str, user: str) -> str:
+    from openai import OpenAI
+
+    # base_url lets the same client target OpenAI-compatible endpoints such as
+    # Groq or Gemini (free tiers); empty base_url -> real OpenAI.
+    client = OpenAI(api_key=settings.openai_api_key,
+                    base_url=settings.openai_base_url or None)
+    resp = client.chat.completions.create(
+        model=settings.openai_model, max_tokens=600,
+        messages=[{"role": "system", "content": system},
+                  {"role": "user", "content": user}])
+    return (resp.choices[0].message.content or "").strip()
+
+
 def _generate_local(system: str, user: str) -> str:
     global _local_pipe
     if _local_pipe is None:
@@ -50,13 +64,19 @@ def _generate_template(system: str, user: str) -> str:
 
 
 def generate(system: str, user: str) -> str:
-    """Generate text with the configured provider, falling back safely."""
-    provider = settings.llm_provider
-    if provider == "anthropic" and settings.anthropic_api_key:
+    """Generate text with the active provider, falling back safely."""
+    provider = active_provider()
+    if provider == "anthropic":
         try:
             return _generate_anthropic(system, user)
         except Exception:  # noqa: BLE001 - any API failure must not kill the demo
             log.exception("anthropic provider failed, falling back to local")
+            provider = "local"
+    if provider == "openai":
+        try:
+            return _generate_openai(system, user)
+        except Exception:  # noqa: BLE001
+            log.exception("openai provider failed, falling back to local")
             provider = "local"
     if provider == "local":
         try:
@@ -67,10 +87,15 @@ def generate(system: str, user: str) -> str:
 
 
 def active_provider() -> str:
-    """The provider that would actually be used right now."""
-    if settings.llm_provider == "anthropic" and settings.anthropic_api_key:
+    """The provider that would actually be used right now (key-aware)."""
+    p = settings.llm_provider
+    if p == "anthropic" and settings.anthropic_api_key:
         return "anthropic"
-    return settings.llm_provider
+    if p == "openai" and settings.openai_api_key:
+        return "openai"
+    if p == "local":
+        return "local"
+    return "template"
 
 
 if __name__ == "__main__":

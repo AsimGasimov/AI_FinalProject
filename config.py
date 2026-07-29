@@ -61,8 +61,13 @@ class Settings(BaseSettings):
         env_file=PROJECT_ROOT / ".env", env_file_encoding="utf-8", extra="ignore"
     )
 
-    llm_provider: Literal["template", "local", "anthropic"] = "template"
+    llm_provider: Literal["template", "local", "anthropic", "openai"] = "template"
     anthropic_api_key: str = ""
+    openai_api_key: str = ""
+    openai_model: str = "gpt-4o-mini"
+    # Optional OpenAI-compatible base URL (e.g. Groq/Gemini free tiers). Empty =
+    # real OpenAI. Groq: https://api.groq.com/openai/v1
+    openai_base_url: str = ""
     device: Literal["auto", "cpu", "cuda"] = "auto"
     num_workers: int = 0
     database_url: str = f"sqlite:///{PROJECT_ROOT / 'foodlens.db'}"
